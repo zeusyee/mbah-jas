@@ -7,35 +7,38 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $featuredMenus = [
-            [
-                'id' => 1,
-                'name' => 'Nasi Gudeg Yogya',
-                'description' => 'Gudeg tradisional dengan ayam kampung dan telur',
-                'price' => 25000,
-                'image' => '/images/gudeg.jpg',
-                'category' => 'Makanan Utama'
-            ],
-            [
-                'id' => 2,
-                'name' => 'Sate Klathak',
-                'description' => 'Sate kambing khas Yogyakarta dengan bumbu spesial',
-                'price' => 35000,
-                'image' => '/images/sate-klathak.jpg',
-                'category' => 'Makanan Utama'
-            ],
-            [
-                'id' => 3,
-                'name' => 'Es Dawet Ayu',
-                'description' => 'Minuman tradisional segar dengan santan dan gula merah',
-                'price' => 15000,
-                'image' => '/images/dawet.jpg',
-                'category' => 'Minuman'
-            ]
-        ];
+   
+// ...existing code...
+public function index()
+{
+    $featuredMenus = [
+        [
+            'id' => 1,
+            'name' => 'Mie dok dok',
+            'description' => 'mie degan paduan rempah rempah dan telur',
+            'price' => 14000,
+            'category' => 'Makanan Utama',
+            'image' => asset('images/menu/miedok.jpg')
+        ],
+        [
+            'id' => 2,
+            'name' => 'Seblak',
+            'description' => 'seblak mix bumbu spesial',
+            'price' => 15000,
+            'category' => 'Makanan Utama',
+            'image' => asset('images/menu/seblak.jpg')
+        ],
+        [
+            'id' => 3,
+            'name' => 'mix seris',
+            'description' => 'kentang goreng,nuget goreng,sosis goreng dan saus cocol;',
+            'price' => 15000,
+            'category' => 'makanan',
+            'image' => asset('images/menu/mix.jpg')
+        ]
+    ];
 
-        return view('home', compact('featuredMenus'));
-    }
+    return view('home', compact('featuredMenus'));
 }
+}
+// ...existing code...

@@ -34,12 +34,12 @@
         }
         
         .btn-glow {
-            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 0 20px rgba(241, 233, 17, 0.3);
             transition: all 0.3s ease;
         }
         
         .btn-glow:hover {
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+            box-shadow: 0 0 30px rgba(249, 212, 29, 0.5);
         }
     </style>
 </head>
@@ -50,17 +50,17 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-utensils text-green-500 text-2xl"></i>
-                    <h1 class="text-2xl font-bold text-white">Warung Nusantara</h1>
+                    <i class="fas fa-utensils text-yellow-400 text-2xl"></i>
+                    <h1 class="text-2xl font-bold text-white">Warung Mbah Jas</h1>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="{{ route('home') }}" class="text-gray-300 hover:text-green-500 transition duration-300 {{ request()->routeIs('home') ? 'text-green-500' : '' }}">
+                    <a href="{{ route('home') }}"class="text-gray-300 hover:text-yellow-400 transition duration-300 {{ request()->routeIs('home') ? 'text-yellow-400' : '' }}">
                         <i class="fas fa-home mr-2"></i>Beranda
                     </a>
-                    <a href="{{ route('menu.index') }}" class="text-gray-300 hover:text-green-500 transition duration-300 {{ request()->routeIs('menu.index') ? 'text-green-500' : '' }}">
+                    <a href="{{ route('menu.index') }}" class="text-gray-300 hover:text-yellow-500 transition duration-300 {{ request()->routeIs('menu.index') ? 'text-green-500' : '' }}">
                         <i class="fas fa-utensils mr-2"></i>Menu
                     </a>
-                    <a href="{{ route('reservation.index') }}" class="text-gray-300 hover:text-green-500 transition duration-300 {{ request()->routeIs('reservation.index') ? 'text-green-500' : '' }}">
+                    <a href="{{ route('reservation.index') }}" class="text-gray-300 hover:text-yellow-500 transition duration-300 {{ request()->routeIs('reservation.index') ? 'text-green-500' : '' }}">
                         <i class="fas fa-calendar-alt mr-2"></i>Reservasi
                     </a>
                 </div>
@@ -99,19 +99,29 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-utensils text-green-500 text-2xl"></i>
-                        <h3 class="text-xl font-bold">Warung Nusantara</h3>
+                        <i class="fas fa-utensils text-yellow-500 text-2xl"></i>
+                        <h3 class="text-xl font-bold">Warung Mbah Jas</h3>
                     </div>
                     <p class="text-gray-400">Menyajikan cita rasa tradisional Indonesia dengan sentuhan modern. Nikmati pengalaman kuliner yang tak terlupakan bersama keluarga.</p>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Kontak</h3>
-                    <div class="space-y-2 text-gray-400">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>Jl.Tegllayang Caturharjo Pandak Bantul</p>
-                        <p><i class="fas fa-phone mr-2"></i>+62 812-3456-7890</p>
-                        <p><i class="fas fa-envelope mr-2"></i>info@warungnusantara.com</p>
-                    </div>
+                      <div class="space-y-2 text-gray-400">
+                        <p>
+                           <i class="fas fa-map-marker-alt mr-2"></i>
+                           <a href="https://maps.app.goo.gl/g5GLhCW5chVqn2Ri6" target="_blank" class="hover:text-green-400">Jl. Tegllayang Caturharjo Pandak Bantul</a>
+                        </p>
+                        <p>
+                          <i class="fas fa-phone mr-2"></i>
+                           <a href="https://wa.me/6285786695051" target="_blank" class="hover:text-green-400">+62 857-8669-5051</a>
+                        </p>
+                         <p>
+                           <i class="fas fa-envelope mr-2"></i>
+                          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sastrowillogo@gmail.com" target="_blank" class="hover:text-green-400">sastrowillogo@gmail.com</a>
+                         </p>
+                </div>
+
                 </div>
                 
                 <div>
@@ -124,9 +134,6 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Warung Nusantara. All rights reserved.</p>
-            </div>
         </div>
     </footer>
 

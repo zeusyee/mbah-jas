@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Header Section -->
-<section class="py-20 bg-gradient-to-r from-green-900 to-black">
+<section class="py-20 bg-gradient-to-r from-yellow-400 to-black">
     <div class="container mx-auto px-6 text-center">
         <h1 class="text-5xl font-bold mb-6">Menu Lengkap</h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -18,16 +18,16 @@
 <section class="py-8 bg-gray-900 border-b border-gray-800">
     <div class="container mx-auto px-6">
         <div class="flex flex-wrap justify-center gap-4">
-            <button onclick="filterMenu('all')" class="filter-btn bg-green-600 text-white px-6 py-2 rounded-lg transition duration-300">
+            <button onclick="filterMenu('all')" class="filter-btn bg-yellow-400 text-black px-6 py-2 rounded-lg transition duration-300">
                 <i class="fas fa-utensils mr-2"></i>Semua Menu
             </button>
-            <button onclick="filterMenu('Makanan Utama')" class="filter-btn bg-gray-700 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition duration-300">
+            <button onclick="filterMenu('Makanan Utama')" class="filter-btn bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-lg transition duration-300">
                 <i class="fas fa-drumstick-bite mr-2"></i>Makanan Utama
             </button>
-            <button onclick="filterMenu('Minuman')" class="filter-btn bg-gray-700 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition duration-300">
+            <button onclick="filterMenu('Minuman')"class="filter-btn bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-lg transition duration-300">
                 <i class="fas fa-coffee mr-2"></i>Minuman
             </button>
-            <button onclick="filterMenu('Dessert')" class="filter-btn bg-gray-700 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition duration-300">
+            <button onclick="filterMenu('Dessert')" class="filter-btn bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-lg transition duration-300">
                 <i class="fas fa-ice-cream mr-2"></i>Dessert
             </button>
         </div>
@@ -41,7 +41,7 @@
             @php
             // Default menu data jika $menus tidak ada
             $menuData = $menus ?? [
-                ['id' => 1, 'name' => 'Nasi Gudeg Yogya', 'description' => 'Gudeg tradisional dengan ayam kampung, telur, dan sambal krecek. Disajikan dengan nasi hangat dan kerupuk.', 'price' => 25000, 'category' => 'Makanan Utama'],
+                ['id' => 1, 'name' => 'Nasi Gudeg Yogya', 'description' => 'Gudeg tradisional dengan ayam kampung, telur, dan sambal krecek. Disajikan dengan nasi hangat dan kerupuk.', 'price' => 25000, 'category' => 'Makanan Utama' ],
                 ['id' => 2, 'name' => 'Sate Klathak', 'description' => 'Sate kambing khas Yogyakarta dengan bumbu spesial dan lalapan segar. Dibakar dengan arang kayu.', 'price' => 35000, 'category' => 'Makanan Utama'],
                 ['id' => 3, 'name' => 'Ayam Penyet', 'description' => 'Ayam goreng yang dipenyet dengan sambal terasi pedas, lalapan, dan nasi putih.', 'price' => 28000, 'category' => 'Makanan Utama'],
                 ['id' => 4, 'name' => 'Rawon Daging', 'description' => 'Sup daging sapi hitam khas Jawa Timur dengan bumbu kluwek yang kaya rempah.', 'price' => 30000, 'category' => 'Makanan Utama'],
@@ -54,16 +54,16 @@
             @foreach($menuData as $menu)
             <div class="menu-item menu-card bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-green-500/50" data-category="{{ $menu['category'] }}">
                 <!-- Image -->
-                <div class="aspect-w-16 aspect-h-12 overflow-hidden">
-                    <div class="w-full h-48 bg-gradient-to-br from-green-600 to-yellow-600 flex items-center justify-center">
-                        <i class="fas fa-utensils text-4xl text-white opacity-50"></i>
-                    </div>
-                </div>
+            <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                <img src="{{ $menu['image'] ?? asset('images/menu/default.jpg') }}"
+                  alt="{{ $menu['name'] }}"
+                  class="w-full h-48 object-cover" />
+            </div>
                 
                 <!-- Content -->
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="inline-block bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm">
+                        <span class="inline-block bg-yellow-400 text-black px-3 py-1 rounded-full text-sm">
                             {{ $menu['category'] }}
                         </span>
                         <div class="flex items-center text-yellow-400">
@@ -72,7 +72,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <span class="text-gray-400 text-sm ml-2">(4.8)</span>
+                            <span class="text-gray-400 text-sm ml-2">(5.0)</span>
                         </div>
                     </div>
                     
@@ -80,10 +80,10 @@
                     <p class="text-gray-400 mb-4 text-sm">{{ $menu['description'] }}</p>
                     
                     <div class="flex items-center justify-between">
-                        <span class="text-2xl font-bold text-green-500">
+                       <span class="text-2xl font-bold text-yellow-400">
                             Rp {{ number_format($menu['price'], 0, ',', '.') }}
                         </span>
-                        <button onclick="orderNow('{{ $menu['name'] }}', {{ $menu['price'] }})" 
+                        <button onclick="orderNow('{{ $menu['name'] }}', {{ $menu['price'] }})"
                                 class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition duration-300 btn-glow inline-flex items-center">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Pesan Sekarang
@@ -111,23 +111,7 @@
             <p class="text-xl text-gray-400">Dapatkan penawaran menarik dari kami</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-gradient-to-r from-green-700 to-green-600 rounded-xl p-8 text-white">
-                <div class="flex items-center mb-4">
-                    <i class="fas fa-percentage text-3xl mr-4"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold">Diskon 20%</h3>
-                        <p class="text-green-100">Untuk pembelian di atas Rp 100.000</p>
-                    </div>
-                </div>
-                <p class="mb-6">Nikmati diskon spesial untuk setiap pembelian menu dengan minimal transaksi Rp 100.000. Berlaku untuk makan di tempat dan take away.</p>
-                <a href="https://wa.me/6281234567890?text=Halo, saya ingin bertanya tentang promo diskon 20%" 
-                   class="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center">
-                    <i class="fab fa-whatsapp mr-2"></i>
-                    Klaim Sekarang
-                </a>
-            </div>
-            
+    
             <div class="bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-xl p-8 text-white">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-users text-3xl mr-4"></i>
@@ -187,7 +171,7 @@
                        `Harga: Rp ${price.toLocaleString('id-ID')}\n\n` +
                        `Mohon informasi ketersediaan dan cara pemesanannya. Terima kasih!`;
         
-        const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/6285786695051?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }
 </script>
