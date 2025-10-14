@@ -126,7 +126,7 @@
             
             <div class="relative">
                 <div class="aspect-w-16 aspect-h-12 rounded-xl overflow-hidden">
-                    <img src="{{ asset('images/menu/jas.jpg') }}" alt="Warung Mbah Jas" class="w-full h-80 object-cover rounded-xl" />
+                    <img src="{{ asset('menu/jas.jpg') }}" alt="Warung Mbah Jas" class="w-full h-80 object-cover rounded-xl" />
                 </div>
                 
                 <div class="absolute -bottom-6 -left-6 bg-yellow-500 text-white p-4 rounded-lg shadow-lg">

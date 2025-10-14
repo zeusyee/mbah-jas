@@ -14,8 +14,6 @@
     </div>
 </section>
 
-<img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
-
 
 
 <!-- Filter Section -->
@@ -59,7 +57,7 @@
             <div class="menu-item menu-card bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-green-500/50" data-category="{{ $menu['category'] }}">
                 <!-- Image -->
             <div class="aspect-w-16 aspect-h-12 overflow-hidden">
-                <img src="{{ $menu['image'] ?? asset('images/menu/default.jpg') }}"
+                <img src="{{ $menu['image'] ?? asset('menu/default.jpg') }}"
                   alt="{{ $menu['name'] }}"
                   class="w-full h-48 object-cover" />
             </div>

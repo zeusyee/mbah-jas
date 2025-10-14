@@ -31,7 +31,7 @@
 </div>
 
 <div class="text-center mb-5">
-    <img src="{{ asset('images/banner-kopi.jpg') }}" alt="Banner Kopi" class="img-fluid">
+    <img src="{{ asset('menu/banner-kopi.jpg') }}" alt="Banner Kopi" class="img-fluid">
 </div>
 
 <!-- Menu Section -->
@@ -49,7 +49,7 @@
         @foreach ($menu as $item)
         <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
-                <img src="{{ asset('images/' . $item['gambar']) }}" class="card-img-top" alt="{{ $item['nama'] }}">
+                <img src="{{ asset('menu/' . $item['gambar']) }}" class="card-img-top" alt="{{ $item['nama'] }}">
                 <div class="card-body">
                     <h5>{{ $item['nama'] }}</h5>
                     <p>{{ $item['harga'] }}</p>
@@ -71,7 +71,7 @@
             Kopi tidak hanya dinikmati sebagai minuman, tapi juga menjadi identitas budaya dan ekonomi lokal di berbagai daerah di Indonesia.</p>
         </div>
         <div class="col-md-6">
-            <img src="{{ asset('images/blog-kopi.jpg') }}" class="img-fluid rounded" alt="Blog Kopi">
+            <img src="{{ asset('menu/blog-kopi.jpg') }}" class="img-fluid rounded" alt="Blog Kopi">
         </div>
     </div>
 </section>
