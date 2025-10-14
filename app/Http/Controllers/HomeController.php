@@ -18,7 +18,7 @@ public function index()
             'description' => 'mie degan paduan rempah rempah dan telur',
             'price' => 14000,
             'category' => 'Makanan Utama',
-            'image' => asset('storage/menu/miedok.jpg')
+            'image' => 'https://github.com/ballf327/mbah-jas-menu/blob/main/menu/miedok.jpg?raw=true'
         ],
         [
             'id' => 2,
@@ -26,7 +26,7 @@ public function index()
             'description' => 'seblak mix bumbu spesial',
             'price' => 15000,
             'category' => 'Makanan Utama',
-            'image' => asset('storage/menu/seblak.jpg')
+            'image' => 'https://github.com/ballf327/mbah-jas-menu/blob/main/menu/seblak.jpg?raw=true'
         ],
         [
             'id' => 3,
@@ -34,7 +34,7 @@ public function index()
             'description' => 'kentang goreng,nuget goreng,sosis goreng dan saus cocol;',
             'price' => 15000,
             'category' => 'makanan',
-            'image' => asset('storage/menu/mix.jpg')
+            'image' => 'https://github.com/ballf327/mbah-jas-menu/blob/main/menu/mix.jpg?raw=true'
         ]
     ];
 
