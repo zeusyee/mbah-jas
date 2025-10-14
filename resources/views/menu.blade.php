@@ -14,6 +14,10 @@
     </div>
 </section>
 
+<img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
+
+
+
 <!-- Filter Section -->
 <section class="py-8 bg-gray-900 border-b border-gray-800">
     <div class="container mx-auto px-6">
