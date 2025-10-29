@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a test page.</p>
+<img src="https://github.com/zeusyee/mbah-jas/blob/main/storage/menu/Arabica.jpg?raw=true" alt="Test Image">
+</body>
+</html>
+
+git rm -rf .
+git restore --source=main -- storage/menu
+git add storage/menu
+git commit -m "upload folder menu saja"
+git push origin main -f

@@ -51,7 +51,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-utensils text-yellow-400 text-2xl"></i>
-                    <h1 class="text-2xl font-bold text-white">Warung Mbah Jas</h1>
+                    <h1 class="text-2xl font-bold text-white">The Waroeng Mbah Jas</h1>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="{{ route('home') }}"class="text-gray-300 hover:text-yellow-400 transition duration-300 {{ request()->routeIs('home') ? 'text-yellow-400' : '' }}">
@@ -100,7 +100,7 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <i class="fas fa-utensils text-yellow-500 text-2xl"></i>
-                        <h3 class="text-xl font-bold">Warung Mbah Jas</h3>
+                        <h3 class="text-xl font-bold">The Waroeng Mbah Jas</h3>
                     </div>
                     <p class="text-gray-400">Menyajikan cita rasa tradisional Indonesia dengan sentuhan modern. Nikmati pengalaman kuliner yang tak terlupakan bersama keluarga.</p>
                 </div>

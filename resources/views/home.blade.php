@@ -16,7 +16,7 @@
     
     <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
-            warung mbah jas
+            The Waroeng mbah jas
         </h1>
         <p class="text-xl md:text-2xl mb-8 text-gray-150">
             Rasakan Kekayaan Cita Rasa Tradisional Indonesia
@@ -97,7 +97,7 @@
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-4xl font-bold mb-6">Tentang Warung mbah jas</h2>
+                <h2 class="text-4xl font-bold mb-6">Tentang The Waroeng mbah jas</h2>
                 <p class="text-gray-400 mb-6 text-lg leading-relaxed">
                     Warung mbah jas hadir untuk melestarikan kekayaan kuliner Indonesia. Kami menghadirkan cita rasa autentik dari berbagai daerah di Nusantara dengan bahan-bahan berkualitas dan resep turun temurun.
                 </p>
